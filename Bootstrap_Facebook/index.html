@@ -11,19 +11,31 @@ rel="stylesheet"
     crossorigin="anonymous">
     <!--1.0.1 Agregar desde el rel(atributo que indica la relacion del archivo) , despues integrity para temas de seguridad para que el navegador verifique que el archivo no fue modificado y el crossorigin para que el navegador descargue el archivo sin pedir cookies-->
     <link rel="icon" href="https://www.facebook.com/favicon.ico" type="image/x-icon"> 
+    <!--Usamos un color gris que destaca facebook-->
+    <style> 
+    body { background-color: #f0f2f5; }
+    </style>
 </head>
 <body>
     <!--  -->
     <div class="container"> 
         <!--Inicio de la fila de contenido-->
         <div class="row"> <!-- La fila row es el estante completo// Sirve para agrupar horizontalmente/agrupa las columnas una al lado de la otra-->
-            <div class="col-md-6">
-                <p> este es el pie de pagina </p> <!--usamos la direccion de la imagen que buscaos en gogle--><!-- la col-md-6 es una caja que puse en el estante-->
+            <div class="col-md-6 pt-5">
+            <!--usamos la direccion de la imagen que buscaos en gogle--><!-- la col-md-6 es una caja que puse en el estante-->
 
             <!--Columna del logo--> 
-            <img src="https://brandemia.org/sites/default/files/inline/images/facebook_logo_portada.jpg">
-            <h1>Explora lo que <span class="text-primary">más te gusta</span>.</h1>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Facebook_Logo_2023.png/1280px-Facebook_Logo_2023.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail" alt="Facebook" width="300" class="ms-n3"> 
+            <!-- 
+            1.Display-5:Esta clase de Bootstrap le da ese tamaño de "titular" PD:Es mas grande que un h2 normal
+            2.fw-bold:(Font Weight Bold) Aplica la negrita a TODA la frase
+            3.<span class="text-primary">:Aqui es donde ocurre la magia del color////Al envolver solo las palabras "más te gusta" dentro del span, el color azul no afecta al resto.
+            4.El punto (.): Al colocarlo después del cierre del </span>, el navegador entiende que el punto ya no debe ser azul, sino que vuelve al color original del h2 (que es negro).-->
+            <h2 class="display-5 fw-bold">  Explora
+                lo que <span class="text-primary">más te
+                    gusta</span>.</h2>
 <!-- la etiqueta span se usa para resaltar o modificar porcines de texto, sin afectar el codigo/permite aplicar estilos o scripts(pequeño fragmento de cdigo como animaciones), en este caso dentro de span cree otra clase para darle el color azul a la otra parte del titulo --el punto negro lo hice por logica y salio muy bien solo fue dejarlo fuera del span, ahora por que el h1 va dentro de (col-md-6?-Por que a momento que el logo se mueva lo hara la imagen así que en este momento queda un espacio de 6 para el formulario)-->
+<!-- Aqui usamos fs-3 =Font size Bootstrap va del 1 (muy grande) al 6 (pequeño). Usaremos fs-3 para que se parezca al de la web. //////////////////Sintaxis <hr>: Significa Horizontal Rule. Es una etiqueta que se cierra sola y crea esa línea gris delgada que divide secciones-->
 </div>
             </div>
         
