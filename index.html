@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--paso 1.0: agregar el archivo de estilos de boostrap con el link de css+ el enlace de css dentro de la cabecera   -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+
+    rel="stylesheet" 
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
+    crossorigin="anonymous">
+    <!--1.0.1 Agregar desde el rel(atributo que indica la relacion del archivo) , despues integrity para temas de seguridad para que el navegador verifique que el archivo no fue modificado y el crossorigin para que el navegador descargue el archivo sin pedir cookies-->
+    
+</head>
+<body>
+    <!--  -->
+    <div class="container"> 
+        <!--Inicio de la fila de contenido-->
+        <div class="row"> <!-- La fila row es el estante completo// Sirve para agrupar horizontalmente/agrupa las columnas una al lado de la otra-->
+            <div class="col-md-6">
+                <p> este es el pie de pagina </p> <!--usamos la direccion de la imagen que buscaos en gogle--><!-- la col-md-6 es una caja que puse en el estante-->
+
+            <!--Columna del logo--> 
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWHMfymRolimIVpPjOH95Ivc-5XiXA12Hd3A&s" alt="Logo de facebook">
+            <h1>Explora lo que <span class="text-primary">más te gusta</span>.</h1>
+<!-- la etiqueta span se usa para resaltar o modificar porcines de texto, sin afectar el codigo/permite aplicar estilos o scripts(pequeño fragmento de cdigo como animaciones), en este caso dentro de span cree otra clase para darle el color azul a la otra parte del titulo --el punto negro lo hice por logica y salio muy bien solo fue dejarlo fuera del span, ahora por que el h1 va dentro de (col-md-6?-Por que a momento que el logo se mueva lo hara la imagen así que en este momento queda un espacio de 6 para el formulario)-->
+</div>
+            </div>
+        
+            <div class="col-md-6 "></div> <!-- Columna del formulario de inicio de sesion-->
+
+
+            
+            
+            <div class="col-12"></div> <!-- Se crea para colocar la imagen central-->
+            <img src="img_fondo_facebook.png" alt="Imagen central de la pagina de inicio">
+            <div class="col-12"></div> <!-- Columna para el pie de página //Ocupa todoel ancho(12)-->
+        </div>  
+    </div>
+    
+
+
+
+
+
+
+
+
+    <!-- 1.1ANTES DEL CIERRE DE BODY VA :agrega el enlace del archivo este es el enlace para cargar el archivo de JS de bootstrap , que es el que sirve para menús desplegables y carruseles de imagenes, ventanas emergentes(interacción visua en mi pagina) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+</body>
+</html>

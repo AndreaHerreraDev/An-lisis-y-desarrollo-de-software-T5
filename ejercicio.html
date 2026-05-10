@@ -1,0 +1,142 @@
+<!DOCTYPE html> <!-- le dice al navegador web que es html 5-->
+<html lang="es"> <!--es indica al navegador que el contenido esta en español-->
+<head><!--Es la part no visible del codigo/ ademas del titulo de la pantalla , podria colocarse info para que los buscadores lo encuentren-->
+
+<!-- Meta viewport: HACE QUE SE VEA BIEN EN CELULAR -->
+<meta charset="utf-8"> <!--Le dice al navegador que juego de caracteres utilizar como:ñ, tilde o simbolos especiales-->
+<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Esta es clave para visualizar en telefonos/adaptabilidad a los telefonos meta(etiqueta para dar informacion) meta name (sirve para especificar que tipo de informacion estoy dando) = viewport(nombre que se le da al área visible de la página) En ese sentido name y content son propiedades(caracteristicas) o atributos de la etiqueta meta, content="width=device-width(ancho=a ancho del dispositivo, navegador web ajuste la pantalla al celular), initial-scale=1"(define el nivel de suma inicial de carga/le dice al navegador que no haga ningun zoom si no que muestre la página real).-->
+<title>Mi Bootstrap en 60 min</title>  
+<!-- Esta etiqueta sirve para ponerle titulo a la pagina web, lo que aparece en la pestaña del navegador -->
+
+<!-- ESTA LÍNEA TRAE BOOTSTRAP (CSS para estilos) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
+        crossorigin="anonymous">
+        <!-- HREF es para direccion exacta donde vs code busca los estilos de boottrap
+        rel= Le dice que esta es una hoja de estilos css
+        intgrity=contraseña para asegurarme de que el archivo no ha sido modificado/sirve al navegador /crossorigin=atributo, Aqui le estoy diciendo que descargue el archivo sin compartir cookies del usuario-->
+</head>
+
+<body>
+<body class="bg-warning"> <!--le cambié el "bg-ligth por bg-warning y me di cuenta que el fondo cambió"-->
+
+  <!-- NAVBAR (barra superior pro) -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> <!--barra negra-->
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Mi Web Bootstrap</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span> <!-- Hamburguesa móvil /responsive/ hamburguesa apilada-->
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Sobre nosotros</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION (título grande) -->
+  <div class="container mt-5">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <h1 class="display-4 fw-bold text-success mb-4">¡Aprende Bootstrap Visual!</h1>
+        <p class="lead fs-4">Grid, botones, cards. Cambia y ve en vivo.</p>
+        <button class="btn btn-success btn- lg-3">¡Empezar!</button>
+      </div>
+      <div class="col-lg-6">
+        <div class="card border-0 shadow">
+          <div class="card-body p-5">
+            <h5>¿Qué pasa aquí?</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2">✓ Navbar responsive</li>
+              <li class="mb-2">✓ Hero con grid 6/6</li>
+              <li class="mb-2">✓ Card con sombra</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Botón Modal -->
+<button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#miModal">Abrir Modal</button> 
+
+<!-- Modal -->
+<div class="modal fade" id="miModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5>¡Modal Visual!</h5>
+      </div>
+      <div class="modal-body">¡Pop-up funciona con JS auto!</div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- GRID DE CARDS (sección práctica) Grid = Cajones que se mueven solos --> 
+
+  <div class="container my-5">
+    <h2 class="text-center mb-5">Productos</h2>
+<div class="row g-4">
+  <div class="col-md-4">
+    <div class="card h-100 shadow">
+      <img src="portatil1.jpg" class="card-img-top" alt="Card 1">
+      <div class="card-body">
+        <h5 class="card-title">Ks Monitor Elitium Fx 34 Wqhd Hdmi Dp 165hz 1ms Gamer Curvo</h5>
+        <p class="card-text"> Monitor curvo de 31,5 pulgadas: este monitor QHD 2560 x 1440P de 31,5 pulgadas presenta una curvatura de 1800R, lo que ofrece una experiencia de juego y visualización inmersiva con amplios ángulos de visión. El diseño de bisel estrecho de 3 lados maximiza el espacio de la pantalla y mejora la estética, mientras que la inclinación ajustable (de -5 a 15) garantiza la comodidad durante largas sesiones de juego o trabajo </p>
+        <h4 class="card-title">$256.000 pesoos COP </h4>
+        <button class="btn btn-primary w-100">Comprar</button>
+      </div>
+    </div>
+  </div>
+  <!-- Copia las otras 2 iguales, cambia texto "Imagen 2", "Producto 2" -->
+</div>
+<div class="row g-4">
+  <div class="col-md-4">
+    <div class="card h-100 shadow">
+      <img src="monitor2.png" class="card-img-top" alt="Card 1">
+      <div class="card-body">
+        <h5 class="card-title">Monitor Para Juegos Crua Curvo De 32 Pulgadas 2k Qhd 165hz F</h5>
+        <p class="card-text">Monitor curvo de 31,5 pulgadas: este monitor QHD 2560 x 1440P de 31,5 pulgadas presenta una curvatura de 1800R, lo que ofrece una experiencia de juego y visualización inmersiva con amplios ángulos de visión. El diseño de bisel estrecho de 3 lados maximiza el espacio de la pantalla y mejora la estética, mientras que la inclinación ajustable (de -5 a 15) garantiza la comodidad durante largas sesiones de juego o trabajo </p>
+        <h4 class="card-title">$663.000 pesos COP </h4>
+       
+        <button class="btn btn-success w-100">Comprar</button>
+      </div>
+    </div>
+  </div>
+  <!-- Copia las otras 2 iguales, cambia texto "Imagen 2", "Producto 2" -->
+</div>
+<div class="row g-4">
+  <div class="col-md-4">
+    <div class="card h-100 shadow">
+      <img src="monitor.png" class="card-img-top" alt="Card 1">
+      <div class="card-body">
+        <h5 class="card-title">Monitor Curvo Lg 24 24u421a-b Fhd Hdmi Usb-c 100hz</h5>
+        <p class="card-text">Colores vivos con precisión
+Nuestra pantalla FHD (1920 x 1080) ofrece imágenes claras con una gama de colores sRGB del 99 % (típico) y una curvatura de 1500R, lo que mejora la productividad laboral.</p>
+<h4 class="card-title">$412.153 COP </h4>
+
+        <button class="btn btn-primary w-100">Comprar</button>
+      </div>
+    </div>
+  </div>
+  <!-- Copia las otras 2 iguales, cambia texto "Imagen 2", "Producto 2" -->
+</div>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white text-center py-4 mt-5">
+    <p>&copy; 2026 Mi Bootstrap. Hecho con ❤️ y clases visuales.</p>
+  </footer>
+
+  <!-- JS al final (siempre) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
+          integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" 
+          crossorigin="anonymous"></script>
+</body>
+</body>
+</html>
