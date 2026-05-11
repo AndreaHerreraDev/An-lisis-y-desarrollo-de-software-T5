@@ -1,95 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Facebook</title>
-    <!--paso 1.0: agregar el archivo de estilos de boostrap con el link de css+ el enlace de css dentro de la cabecera   -->
+    <!-- paso 1.0: agregar el archivo de estilos de bootstrap con el link de css+ el enlace de css dentro de la cabecera -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <!--1.0.1 Agregar desde el rel(atributo que indica la relacion del archivo) , despues integrity para temas de seguridad para que el navegador verifique que el archivo no fue modificado y el crossorigin para que el navegador descargue el archivo sin pedir cookies-->
-    <link rel="icon" href="https://www.facebook.com/favicon.ico" type="image/x-icon">
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <!-- 1.0.1: Agregar desde el rel, integrity y crossorigin para seguridad y correcto cargado -->
+    <link rel="icon" href="https://www.facebook.com/favicon.ico" type="image/x-icon" />
     <!--Usamos un color gris que destaca facebook-->
     <style>
+        /* Estilos personalizados para el fondo y enlaces */
         body {
-            background-color: #f0f2f5;
+            background-color: #f0f2f5; /* Color gris claro de fondo para toda la página */
         }
 
+        /* Estilo para el enlace de "¿Olvidaste tu contraseña?" */
         .link-olvidaste {
-            color: #2e2f30;
-            /* Color negro/gris oscuro original */
-            text-decoration: none;
-            padding: 8px;
-            border-radius: 6px;
-            transition: background-color 0.3s;
-            /* Para que el cambio no sea brusco */
+            color: #2e2f30; /* Color gris oscuro/negro */
+            text-decoration: none; /* Sin subrayado */
+            padding: 8px; /* Espaciado interno para mejor clickeo */
+            border-radius: 6px; /* Bordes redondeados */
+            transition: background-color 0.3s; /* Transición suave al hacer hover */
         }
 
+        /* Cambio visual al hacer hover */
         .link-olvidaste:hover {
-            background-color: #f0f2f5;
-            /* El gris clarito de Facebook */
-            color: #1c1e21;
-            /* Mantenemos el texto oscuro */
+            background-color: #f0f2f5; /* Gris clarito de Facebook */
+            color: #1c1e21; /* Texto oscuro */
         }
     </style>
 </head>
-
 <body>
-    <!--  -->
-    <div class="container d-flex align-items-center" style="min-height: 100vh;"> <!--Esto lo coloco para que se alinee a la izquierda -->
+<!--     
+    <div class="container d-flex align-items-center" style="min-height: 100vh;"> 
+        Esto lo coloco para que se alinee a la izquierda, pero en realidad centra verticalmente -->
+        <!-- Este div principal usa display flex, para alinear verticalmente al centro de la pantalla -->
+        <!-- min-height: 100vh asegura que ocupe toda la altura de la ventana del navegador -->
+        
         <!--Inicio de la fila de contenido-->
-        <div class="row w-100 align-items-center">
+        <!-- <div class="row w-100 align-items-center"> -->
             <!-- La fila row es el estante completo// Sirve para agrupar horizontalmente/agrupa las columnas una al lado de la otra-->
-            <div class="col-md-6 pt-5">
-                <!--usamos la direccion de la imagen que buscaos en gogle--><!-- la col-md-6 es una caja que puse en el estante-->
+            <!-- La clase w-100 hace que ocupe todo el ancho -->
+            <!-- align-items-center para centrar verticalmente las columnas dentro de la fila -->
 
-                <!--Columna del logo-->
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Facebook_Logo_2023.png/1280px-Facebook_Logo_2023.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
-                    alt="Facebook" width="300" class="ms-n3">
+            <!-- La columna izquierda: logo y título -->
+            <!-- <div class="col-md-6 pt-5"> -->
+                <!--usamos la direccion de la imagen que buscamos en google-->
+                <!-- La col-md-6 es una caja que en pantallas medianas y grandes ocupa la mitad del ancho -->
+                <!-- En pantallas pequeñas, se ajusta automáticamente a 100% -->
+                <!-- Columna del logo -->
+                <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Facebook_Logo_2023.png/1280px-Facebook_Logo_2023.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail" 
+                    alt="Facebook" width="300" class="ms-n3" />
+                La clase ms-n3 aplica un margen negativo izquierdo para ajustar la posición del logo -->
+
                 <!-- 
-            1.Display-5:Esta clase de Bootstrap le da ese tamaño de "titular" PD:Es mas grande que un h2 normal
-            2.fw-bold:(Font Weight Bold) Aplica la negrita a TODA la frase
-            3.<span class="text-primary">:Aqui es donde ocurre la magia del color////Al envolver solo las palabras "más te gusta" dentro del span, el color azul no afecta al resto.
-            4.El punto (.): Al colocarlo después del cierre del </span>, el navegador entiende que el punto ya no debe ser azul, sino que vuelve al color original del h2 (que es negro).-->
+                1. Display-5:Esta clase de Bootstrap le da ese tamaño de "titular" PD:Es mas grande que un h2 normal
+                2.fw-bold:(Font Weight Bold) Aplica la negrita a TODA la frase
+                3.<span class="text-primary">:Aqui es donde ocurre la magia del color////Al envolver solo las palabras "más te gusta" dentro del span, el color azul no afecta al resto.
+                4.El punto (.): Al colocarlo después del cierre del </span>, el navegador entiende que el punto ya no debe ser azul, sino que vuelve al color original del h2 (que es negro).
                 <h2 class="display-5 fw-bold"> Explora
                     lo que <span class="text-primary">más te
-                        gusta</span>.</h2>
-                <!-- la etiqueta span se usa para resaltar o modificar porcines de texto, sin afectar el codigo/permite aplicar estilos o scripts(pequeño fragmento de cdigo como animaciones), en este caso dentro de span cree otra clase para darle el color azul a la otra parte del titulo --el punto negro lo hice por logica y salio muy bien solo fue dejarlo fuera del span, ahora por que el h1 va dentro de (col-md-6?-Por que a momento que el logo se mueva lo hara la imagen así que en este momento queda un espacio de 6 para el formulario)-->
-                <!-- Aqui usamos fs-3 =Font size Bootstrap va del 1 (muy grande) al 6 (pequeño). Usaremos fs-3 para que se parezca al de la web. //////////////////Sintaxis <hr>: Significa Horizontal Rule. Es una etiqueta que se cierra sola y crea esa línea gris delgada que divide secciones-->
+                        gusta</span>.</h2> -->
+                <!-- la etiqueta span se usa para resaltar o modificar porcines de texto, sin afectar el codigo/permite aplicar estilos o scripts(pequeño fragmento de cdigo como animaciones), en este caso dentro de span cree otra clase para darle el color azul a la otra parte del titulo -->
+                <!--el punto negro lo hice por logica y salio muy bien solo fue dejarlo fuera del span, ahora por que el h1 va dentro de (col-md-6?) -->
+                <!--Porque en ese momento, que el logo se mueva, lo hará la imagen así que en este momento queda un espacio de 6 para el formulario 
+            </div>
+            Fin de la columna izquierda 
+        </div>
+        Fin de la fila -->
+
+        <!-- Columna del formulario de inicio de sesion 
+        <div class="col-md-5 offset-md-1">
+            La clase offset-md-1 desplaza la columna 1 espacio a la derecha 
+            <div class="card shadow border-0 p-4 rounded-3">
+                La tarjeta con sombra y bordes redondeados 
+                <form>
+                    Input para número de celular o email 
+                    <input type="text" class="form-control mb-3 py-3 shadow-sm"
+                        placeholder="Número de celular o correo electrónico" />
+                    Input para contraseña 
+                    <input type="password" class="form-control mb-3 py-3 shadow-sm" placeholder="Contraseña" />
+
+                     Botón para iniciar sesión 
+                    <button type="button" class="btn btn-primary w-100 fw-bold py-2 mb-3">Iniciar sesión</button>
+
+                    <!-- Enlace para olvidar contraseña -->
+                    <div class="text-center my-3 ">
+                        <a href="#" class="link-olvidaste">¿Olvidaste tu contraseña?</a>
+                    </div>
+                    <hr class="my-4" />
+                    <!-- Separador horizontal -->
+
+                    <!-- Botón para crear una cuenta -->
+                    <button type="button" class="btn btn-outline-primary w-100 fw-bold py-2">Crear cuenta nueva</button>
+                </form>
             </div>
         </div>
+        <!-- Fin del formulario -->
 
-        <div class="col-md-5 offset-md-1 "></div>
-        <!-- Columna del formulario de inicio de sesion-->
-        <div class="card shadow border-0 p-4 rounded-3">
-            <form>
-                <input type="text" class="form-control mb-3 py-3 shadow-sm"
-                    placeholder="Número de celular o correo electrónico"> <!--El placeholder en HTML sirve para mostrar un texto guía dentro de un input antes de que el usuario escriba.-->
-                <input type="password" class="form-control mb-3 py-3 shadow-sm" placeholder="Contraseña">
-
-                <button type="button" class="btn btn-primary w-100 fw-bold py-2 mb-3">Iniciar
-                    sesión</button>
-
-                <div class="text-center my-3 ">
-                    <a href="#" class="link-olvidaste">¿Olvidaste tu contraseña?</a>
-                </div>
-                <hr class="my-4">
-                <div class="text-center"></div>
-
-
-
-                <!-- <div class="text-center">
-                    <a href="#" class="text center btn btn-ligth w-100 py-2 my-3"
-                        style="color: #000000; font-size: 17px"
-                    <a href="#" class="link-olvidaste"">¿Olvidaste tu contraseña?</a>
-                </div> -->
-
-                <button type="button" class="btn btn-outline-primary w-100 fw-bold py-2">Crear cuenta nueva</button>
-                </div>
-            </form>
+        <!-- Imagen central de fondo -->
+        <div class="col-12 text-center mt-4">
+            <!-- La clase col-12 ocupa todo el ancho en pantallas pequeñas y grandes -->
+            <img src="img_fondo_facebook.png" alt="Imagen central de la pagina de inicio" class="img-fluid" />
+            <!-- La clase img-fluid hace que la imagen sea responsiva y se adapte al tamaño del contenedor -->
         </div>
-
+    </div>
 
         <!-- <div class="card shadow border-0 p-3 rounded-3"> -->
 
@@ -107,11 +124,7 @@
 
 
 
-        <div class="col-12"></div> <!-- Se crea para colocar la imagen central-->
-        <img src="img_fondo_facebook.png" alt="Imagen central de la pagina de inicio">
-        <div class="col-12"></div> <!-- Columna para el pie de página //Ocupa todoel ancho(12)-->
-    </div>
-    </div>
+
 
 
 
@@ -122,6 +135,7 @@
 
 
     <!-- 1.1ANTES DEL CIERRE DE BODY VA :agrega el enlace del archivo este es el enlace para cargar el archivo de JS de bootstrap , que es el que sirve para menús desplegables y carruseles de imagenes, ventanas emergentes(interacción visua en mi pagina) -->
+<!-- Scripts necesarios para Bootstrap, justo antes de cerrar body -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
@@ -129,5 +143,4 @@
         integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
         crossorigin="anonymous"></script>
 </body>
-
 </html>
